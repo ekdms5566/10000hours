@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+/* Layout */
+
+#app {
+    background-color: #5B2386;
+    color: white;
+    font-family: 'GmarketSansMedium';
+    padding-top: 50px;
+    text-align: center;
+}
+
+.blind {
+    visibility: hidden;
+}
+
+/* PC */
+.tit-timelaw {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 66px;
+    position: relative;
+}
+
+.tit-timelaw .title {
+    width: 564px;
+    position: absolute;  
+}
+
+.tit-timelaw .title-bg {
+    width: 221.6px;
+    height: 225px;
+}
+
+.img-txt {
+    width: 486px;
+}
+
+.sub-title {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    margin-top: 91px;
+    margin-bottom: 102px;
+}   
+
+.sub-title .txt-desc {
+    line-height: 160%;
+    font-size: 18px;
+    position: absolute;
+}
+
+.sub-title .tit-desc {
+    font-family: "GmarketSansBold"; 
+    font-size: 24px;
+}
+
+.cont-inp {
+    font-size: 24px;
+}
+
+.cont-inp .txt-wannabe {
+    margin-bottom: 27px;
+}
+
+.cont-inp input {
+    padding: 15px 20px;
+    margin: 0 15px;
+    border: none;
+    border-radius: 7px;
+    font-size: 24px;
+    font-family: "GmarketSansMedium";
+    width: 200px;
+    text-align: center;
+}
+
+.cont-inp input::placeholder {
+    color: #BABCBE;
+}
+
+.cont-inp .btn-exc {
+    font-family: "GmarketSansBold";
+    font-size: 24px;
+    width: 565px;
+    height: 66px;
+    padding: 21px 49px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    background-color: #FCEE21;
+    color: #5B2386;
+    border: none;
+    margin-top: 115px;
+    margin-bottom: 147px;
+}
+
+.btn-result {
+    position: relative;
+}
+
+.cont-inp .click-img {
+    position: absolute;
+    top: 130px;
+}
+
+.cont-result {
+    font-size: 24px;
+}
+
+.cont-result .txt-wannabe {
+    margin-bottom: 20px;
+}
+
+.cont-result span {
+    font-family: "GmarketSansBold";
+    font-size: 72px;
+    padding: 10px;
+}
+
+.cont-result .btn-go {
+    margin-top: 115px;
+    margin-bottom: 147px;
+}
+
+.btn-go {
+    font-family: "GmarketSansBold";
+    font-size: 24px;
+    width: max-content;
+    height: 66px;
+    padding: 21px 49px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    background-color: #FCEE21;
+    color: #5B2386;
+    border: none;
+}
+
+.btn-share {
+    font-family: "GmarketSansBold";
+    font-size: 24px;
+    width: max-content;
+    height: 66px;
+    padding: 21px 49px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    background-color: #ffffff;
+    color: #5B2386;
+    border: none;
+    margin: 115px auto 147px 18px;
+    /* line-height: 1; 
+    버튼 글씨 어떻게 해야하지 */
+}
+
+.cont-footer .logo {
+    width: 125px;
+    margin-bottom: 20px;
+}
+
+.cont-footer .txt-footer {
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    line-height: 160%;
+    padding-bottom: 100px;
+}
+
+/* modal */
+#modal {
+    position: fixed;
+   display: none ;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    text-align: center;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    border-radius: 30px;
+    /* display: flex;  */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#modal .modal-title {
+    margin-top: 76px;
+    margin-bottom: 25px;
+}
+#modal .modal-sub {
+    margin-bottom: 30px;
+}
+
+#modal .btn-go {
+    margin-top: 74px;
+    margin-bottom: 68px;
+}
+
+/* mobile */
+
+
+
