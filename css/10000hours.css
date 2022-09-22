@@ -28,6 +28,15 @@
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
 }
 
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 /* Layout */
 
 #app {
@@ -42,7 +51,7 @@
     visibility: hidden;
 }
 
-/* PC */
+/* Components */
 .tit-timelaw {
     display: flex;
     justify-content: center;
@@ -76,17 +85,17 @@
 
 .sub-title .txt-desc {
     line-height: 160%;
-    font-size: 18px;
+    font-size: 1.2rem;
     position: absolute;
 }
 
 .sub-title .tit-desc {
     font-family: "GmarketSansBold"; 
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .cont-inp {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .cont-inp .txt-wannabe {
@@ -98,7 +107,7 @@
     margin: 0 15px;
     border: none;
     border-radius: 7px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: "GmarketSansMedium";
     width: 200px;
     text-align: center;
@@ -110,7 +119,7 @@
 
 .cont-inp .btn-exc {
     font-family: "GmarketSansBold";
-    font-size: 24px;
+    font-size: 1.5rem;
     width: 565px;
     height: 66px;
     padding: 21px 49px;
@@ -132,8 +141,21 @@
     top: 130px;
 }
 
+.loading-result{
+    display: none;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.loading-img{
+    width: 100px;
+    height: 100px;
+    animation: rotate 1.4s infinite linear;
+}
+
 .cont-result {
-    font-size: 24px;
+    display: none;
+    font-size: 1.5rem;
 }
 
 .cont-result .txt-wannabe {
@@ -142,7 +164,7 @@
 
 .cont-result span {
     font-family: "GmarketSansBold";
-    font-size: 72px;
+    font-size: 4.5rem;
     padding: 10px;
 }
 
@@ -153,7 +175,7 @@
 
 .btn-go {
     font-family: "GmarketSansBold";
-    font-size: 24px;
+    font-size: 1.5rem;
     width: max-content;
     height: 66px;
     padding: 21px 49px;
@@ -166,7 +188,7 @@
 
 .btn-share {
     font-family: "GmarketSansBold";
-    font-size: 24px;
+    font-size: 1.5rem;
     width: max-content;
     height: 66px;
     padding: 21px 49px;
@@ -176,8 +198,6 @@
     color: #5B2386;
     border: none;
     margin: 115px auto 147px 18px;
-    /* line-height: 1; 
-    버튼 글씨 어떻게 해야하지 */
 }
 
 .cont-footer .logo {
@@ -187,7 +207,7 @@
 
 .cont-footer .txt-footer {
     font-family: "Noto Sans KR";
-    font-size: 12px;
+    font-size: 0.8rem;
     line-height: 160%;
     padding-bottom: 100px;
 }
@@ -222,10 +242,14 @@
 
 #modal .btn-go {
     margin-top: 74px;
-    margin-bottom: 68px;
+    margin-bottom: 30px;
 }
 
-/* mobile */
-
-
-
+#modal .modal-close{
+    cursor: pointer;
+    width: 100px;
+    margin-bottom: 50px;
+    color: gray;
+    font-family: 'GmarketSansMedium';
+    padding: 0 100px;
+}
