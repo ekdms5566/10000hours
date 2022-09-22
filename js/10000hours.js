@@ -1,20 +1,34 @@
-// js file
-
-const openButton = document.querySelector(".btn-go");
-const modal = document.querySelector("#modal");
-
-function openModal(){
-    modal.style.display = 'flex';
-}
-
-function closeModal(){
-    modal.style.display = 'none';
-}
-
-window.onclick = function(event){
-    if(event.target == modal){
-        closeModal();
+function calcTime(){
+    const loading = document.querySelector(".loading-result");
+    const result = document.querySelector(".cont-result");
+    const resultWannabe = document.getElementById("result-wannabe");
+    const resultTime = document.getElementById("result-time");
+    let inpWannabe =document.getElementById("inp-wannabe").value;
+    let inpTime = Number(document.getElementById("inp-time").value);
+    
+    if(inpWannabe == ""){
+        alert("내용을 입력하세요.");
+        return false;
+    } else if(inpTime == ""){
+        alert("내용을 입력하세요.");
+        return false;
+    } else{
+        loading.style.display = "block";
     }
+
+    setTimeout(()=>{
+        loading.style.display="none";
+        result.style.display="block";
+        resultWannabe.innerText=inpWannabe;
+        resultTime.innerText=parseInt((10000/inpTime),10);
+    }, 2000);
+    
 }
 
-openButton.addEventListener('click',openModal);
+document.querySelector(".btn-go").addEventListener("click",()=>{
+    document.getElementById("modal").style.display = 'flex';
+})
+
+document.querySelector(".modal-close").addEventListener("click",()=>{
+    document.getElementById("modal").style.display = 'none';
+})
