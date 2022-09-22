@@ -9,39 +9,6 @@
     <title>1만 시간의 법칙</title>
 </head>
 <body>
-    <!--
-    <header>
-        <img class="title" src="img/title.png" alt="1만 시간의 법칙">
-        <p>"연습은 어제의 당신보다 당신을 더 낫게 만든다."</p>
-        <h1>1만 시간의 법칙은<br>어떤 분야의 전문가가 되기 위해서는<br>최소한 1만 시간의 훈련이 필요하다는 법칙이다.</h1>
-    </header>
-    <main>
-        <section>
-            <p>
-                나는 전문가가 될 것이다.<br>그래서 앞으로 매일 하루에 시간씩 훈련할 것이다.
-            </p>
-            <div></div>
-            <div></div>
-            <button>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>           
-        </section>
-        <section>
-            당신은 <strong>프로그래밍</strong> 전문가가 되기 위해서<br>대략 <strong>5110</strong>일 이상 훈련하셔야 합니다! :)
-            <div>
-            <button>훈련하러 가기 GO!GO!</button>
-            <button>공유하기</button>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <img src="img/logo.png" alt="weniv">
-        <p>
-            ※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.<br>수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.
-        </p>
-    </footer>
--->
-
-<!-- (main>div*7)+footer -->
-
     <main id="app">
         <h1 class="tit-timelaw">
             <img class="title" src="img/title.png" alt="1만 시간의 법칙">
@@ -59,26 +26,29 @@
         <form class="cont-inp">
             <p class="txt-wannabe">
                 나는
-                <input type="text" placeholder="예)프로그래밍" required>
+                <input id="inp-wannabe" type="text" placeholder="예)프로그래밍" required>
                 전문가가 될 것이다.
             </p>
             <p class="txt-time">
                 그래서 앞으로 매일 하루에
-                <input type="text" placeholder="예)5시간" required>
+                <input id="inp-time" type="text" placeholder="예)5시간" required>
                 시간씩 훈련할 것이다.
             </p>
             <div class="btn-result">
-                <button class="btn-exc">나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
-                <img class="click-img" src="img/click.png" alt="">
+                <button class="btn-exc" type="button" onclick="calcTime();">나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
+                <img class="click-img" src="img/click.png" alt="클릭">
             </div>
         </form>
-        <section class="cont-result" id="result">
+        <div class="loading-result">
+            <img class="loading-img" src="./img/loading.png" alt="로딩중">
+        </div>
+        <section class="cont-result">
             <h2 class="blind">결과 확인</h2>
             <p class="txt-wannabe">
-            당신은 <span>프로그래밍</span> 전문가가 되기 위해서 
+            당신은 <span id="result-wannabe"></span> 전문가가 되기 위해서 
             </p>
             <p class="txt-time"> 
-            대략 <span>5110</span>일 이상 훈련하셔야 합니다! :)
+            대략 <span id="result-time"></span>일 이상 훈련하셔야 합니다! :)
             </p>
             <button class="btn-go">훈련하기 가기 GO!GO!</button>
             <button class="btn-share">공유하기</button>
@@ -98,7 +68,8 @@
     <img class="modal-sub" src="img/sub-title-modal.png" alt="">
     <img class="modal-img" src="img/licat.png" alt="응원하는 라이캣">
     <button class="btn-go">종료하고 진짜 훈련하러 가기 GO!GO!</button>
+    <p class="modal-close">닫기</p>
 </section>
-<script src="js/10000hours.js"></script>
+<script type="text/javascript" src="js/10000hours.js"></script>
 </body>
 </html>
